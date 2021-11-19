@@ -1,0 +1,45 @@
+form {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+.input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid white;
+  outline: none;
+  font-family: "open sans";
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  background: transparent;
+  transition: border-radius 250ms;
+}
+.input:focus {
+  border-radius: 2rem;
+}
+.mainDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  padding: 10px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 5px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    #5500FF,
+    #220066
+  );
+  color: #fff;
+  transition: border-radius 250ms;
+}
+button:hover {
+  border-radius: 2rem;
+}

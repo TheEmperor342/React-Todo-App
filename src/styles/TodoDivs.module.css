@@ -1,0 +1,7 @@
+.div{
+  font-family: Poppins;
+  display: flex;
+}
+div p {
+  width: 100%;
+}
