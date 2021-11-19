@@ -1,5 +1,5 @@
 # ToDo React App
-I made this while practice ReactJS
+I made this while practicing ReactJS
 
 ## How to Start
 ```
