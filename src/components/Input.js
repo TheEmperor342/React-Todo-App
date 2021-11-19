@@ -11,19 +11,29 @@ export default function Input(props) {
           id="input"
           autoComplete="off"
         />
-        <button
-          onClick={
+        <div className={Styles.buttons}>
+          <button
+            onClick={
+                e => {
+                  e.preventDefault();
+                  props.set(
+                    [
+                      ...props.newtodo,
+                      document.getElementById("input").value
+                    ]
+                  );
+                }
+              }
+          >Add Todo</button>
+          <button
+            onClick={
               e => {
                 e.preventDefault();
-                props.set(
-                  [
-                    ...props.newtodo,
-                    document.getElementById("input").value
-                  ]
-                )
+                props.set([]);
               }
             }
-        >Add Todo</button>
+          >Clear Todos</button>
+        </div>
       </form>
     </div>
   );

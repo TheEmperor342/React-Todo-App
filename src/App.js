@@ -9,6 +9,7 @@ export default function App() {
       <div className="parent">
         <div className="innerParent">
           <Input set={setNewTodo} newtodo={todo}/>
+          <h3>Your ToDos</h3>
           <div className="todos">
             <TodoDivs newtodo={todo} set={setNewTodo}/>
           </div>

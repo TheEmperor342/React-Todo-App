@@ -24,8 +24,17 @@ body {
   color: white;
   width: 60vw;
 }
+.parent h3 {
+  font-family: Poppins;
+  font-weight: bolder;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 .innerParent {
   margin: 50px;
+  max-height: 75vh;
+  overflow-y: scroll;
 }
 .todos{
   display: block;

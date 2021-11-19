@@ -1,7 +1,17 @@
 .div{
   font-family: Poppins;
   display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-div p {
+.div p {
   width: 100%;
+  font-weight: bold;
+}
+.div p span {
+  color: rgb(0, 255, 0);
+  font-size: 15px;
+}
+.strikethrough {
+  text-decoration: line-through;
 }

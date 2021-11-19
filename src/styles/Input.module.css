@@ -24,6 +24,12 @@ form {
   align-items: center;
   justify-content: center;
 }
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 button{
   padding: 10px;
   padding-left: 2rem;
