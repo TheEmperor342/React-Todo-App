@@ -14,6 +14,14 @@ a {
 body {
   background: rgb(48, 16, 255)
 }
+
+h1,
+h2,
+h3,
+p {
+  font-family: "open sans";
+}
+
 .parent {
   position: absolute;
   top: 50%;
@@ -38,4 +46,20 @@ body {
 }
 .todos{
   display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .parent{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+  .innerParent {
+    margin: 2rem 5px 5px 0px;
+  }
+  .todos {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }

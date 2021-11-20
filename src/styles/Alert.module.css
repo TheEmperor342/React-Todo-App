@@ -1,0 +1,16 @@
+.alert {
+  width: 100vw;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Poppins;
+  text-align: center;
+}
+.alert p {
+  padding-top: 5px;
+  font-size: 23px;
+}
+.alert p span {
+  font-weight: bolder;
+}

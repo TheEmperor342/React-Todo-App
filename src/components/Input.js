@@ -16,12 +16,21 @@ export default function Input(props) {
             onClick={
                 e => {
                   e.preventDefault();
-                  props.set(
-                    [
-                      ...props.newtodo,
-                      document.getElementById("input").value
-                    ]
-                  );
+                  let val = document.getElementById("input").value;
+                  if (val !== "") {
+                    props.setTodo(
+                      [
+                        ...props.todo,
+                        document.getElementById("input").value
+                      ]
+                    );
+                  }
+                  else if (val === "") {
+                    props.showAlert({
+                      "alert": "Can't take an empty todo",
+                      "type": "Warning"
+                    });
+                  }
                 }
               }
           >Add Todo</button>
@@ -29,7 +38,7 @@ export default function Input(props) {
             onClick={
               e => {
                 e.preventDefault();
-                props.set([]);
+                props.setTodo([]);
               }
             }
           >Clear Todos</button>

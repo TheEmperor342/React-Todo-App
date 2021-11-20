@@ -2,7 +2,7 @@ import Styles from "../styles/TodoDivs.module.css";
 
 export default function TodoDivs(props) {
 
-  return props.newtodo.map((todo, index) => (
+  let jsx = props.todo.map((todo, index) => (
     <div
       className={Styles.div}
       key={index}
@@ -11,10 +11,13 @@ export default function TodoDivs(props) {
         <button
           onClick={
             e => {
-              let a = [...props.newtodo];
+              let a = [...props.todo];
               a.splice(index, 1);
-              props.set(a);
-              console.log(`New Todo: ${props.newtodo}`);
+              props.setTodo(a);
+              props.showAlert({
+                "type": "Success",
+                "alert": "Todo Deleted!"
+              });
           }
         }
         >Delete</button>
@@ -36,5 +39,17 @@ export default function TodoDivs(props) {
           }
         >Completed</button>
       </div>
-  ))
+  ));
+  if (String(jsx) === ""){
+    console.log("ran");
+    return (
+      <>
+      <div className={Styles.nothingHere}>
+        <h2>Looks like there is nothing here...</h2>
+        <p>Lets fix that!</p>
+      </div>
+      </>
+    );
+  }
+  else return jsx;
 }

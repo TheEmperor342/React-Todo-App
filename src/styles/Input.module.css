@@ -49,3 +49,14 @@ button{
 button:hover {
   border-radius: 2rem;
 }
+@media screen and (max-width: 900px) {
+  .mainDiv form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .input {
+    width: 75%;
+  }
+}
